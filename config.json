@@ -1,0 +1,28 @@
+{
+   "global":{
+      "n":100,
+      "m":60,
+      "TARGET_FEATURE":"high",
+      "TRAIN_FILE":"intraday-2015.tsv",
+      "TEST_FILE":"intraday-2016.tsv"
+   },
+   "model":{
+      "SAMPLES_PER_DAY":24,
+      "AUTOREGRESSIVE_NUM_LAGS":8,
+      "linear":{
+         "enable":true,
+         "FIT_INTERCEPT":false
+      },
+      "elasticnet":{
+         "enable":false,
+         "FIT_INTERCEPT":false,
+         "ALPHA":1,
+         "L1RATIO":0.5
+      },
+      "randomforest":{
+         "enable":false,
+         "N_ESTIMATORS":10,
+         "MAX_DEPTH":5
+      }
+   }
+}
